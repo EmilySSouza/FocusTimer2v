@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vh, 62.5%);
+}
+
+html, button, input {
+  font-family: "Roboto", sans-serif;
+  color: #323238;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+html.dark, 
+html.dark #controls button,
+html.dark #toggle-mode {
+  background-color: #323238;
+  color: #E5E5E5;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  font-size: 3.2rem;
+  line-height: 0;
+  background: transparent;
+}
+
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19.2rem;
+  height: 100vh;
+}
+
+#timer span {
+  font-size: 12.6rem;
+  font-weight: 400;
+} 
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 4.0rem;
+}
+
+#controls button {
+  border: none;
+  background: transparent;
+  font-size: 4.8rem;
+}
+
+#sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#sounds button {
+  border: none;
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+  background: #E1E1E6;
+  font-size: 4.8rem;
+}
+
+#sounds button:active {
+  background-color: #02799D;
+}
+
+.florestOn #florest, 
+.rainOn #rain,
+.cafeteriaOn #cafeteria, 
+.fireOn #fire {
+  background-color: #02799D;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  #app {
+    display: flex;
+    flex-direction: column
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer 2.0</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script type="module" src="./src/main.js" defer></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <button id="toggle-mode">
+      <span class="sr-only">Ativar light mode</span>
+      <i class="ph-bold ph-moon"></i>
+      <i class="ph-bold ph-sun"></i>
+    </button>
+
+    <div class="timer">
+      <section id="timer">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button data-action="toggleRunning" class="ph ph-play-circle">
+          <span class="sr-only">Botão para dar play no timer</span>
+        </button>
+        <button data-action="toggleRunning" class="ph ph-pause-circle">
+          <span class="sr-only">Pausar contador</span>
+        </button>
+        <button data-action="reset" class="ph ph-stop-circle">
+          <span class="sr-only">Botão para parar o timer</span>
+        </button>
+        <button data-action="addMinutes" class="ph ph-plus-circle">
+          <span class="sr-only">Botão para adicionar mais 5 minutos no timer</span>
+        </button>
+        <button data-action="removeMinutes" class="ph ph-minus-circle">
+          <span class="sr-only">Botão para diminuir mais 5 minutos no timer</span>
+        </button>
+      </section>
+    </div>
+
+    <div>
+
+      <section id="sounds">
+        <button id="florest" data-sound="florestOn" class="ph ph-tree">
+          <span class="sr-only">Botão para ativar o som de floresta</span>
+        </button>
+        <button id="rain" data-sound="rainOn" class="ph ph-cloud-snow">
+          <span class="sr-only">Botão para ativar som de chuva</span>
+        </button>
+        <button id="cafeteria" data-sound="cafeteriaOn" class="ph ph-storefront">
+          <span class="sr-only">Botão para ativar som de compras</span>
+        </button>
+        <button id="fire" data-sound="fireOn" class="ph ph-fire">
+          <span class="sr-only">Botão para ativar som de fogueira</span>
+        </button>
+      </section>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
