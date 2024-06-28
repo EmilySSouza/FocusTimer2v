@@ -8,6 +8,7 @@ export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle("running");
 
   timer.countdown();
+  sounds.minecraftClick.play();
 }
 
 export function reset() {
@@ -15,6 +16,7 @@ export function reset() {
   document.documentElement.classList.remove("running");
 
   timer.updateDisplay();
+  sounds.minecraftClick.play();
 }
 
 export function addMinutes() {
@@ -29,7 +31,7 @@ export function addMinutes() {
   seconds = seconds;
 
   updateDisplay(minutes, seconds);
-
+  sounds.minecraftClick.play();
 }
 
 export function removeMinutes() {
@@ -44,6 +46,7 @@ export function removeMinutes() {
   seconds = seconds;
 
   updateDisplay(minutes, seconds);
+  sounds.minecraftClick.play();
 }
 
 export function florestOn() {
