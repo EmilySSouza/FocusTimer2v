@@ -108,7 +108,7 @@ html:not(.running) .ph-pause-circle {
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   #app {
     display: flex;
     flex-direction: column;
