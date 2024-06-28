@@ -111,6 +111,7 @@ html:not(.running) .ph-pause-circle {
 @media (max-width: 1200px) {
   #app {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    gap: 6rem;
   }
 }
